@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{322efe9a-c8f6-4487-9cb2-1c0c0b45b8ea}</ProjectGuid>
-    <RootNamespace>CppTestSandbox</RootNamespace>
+    <ProjectGuid>{2ecc2f66-9b99-49f0-95ed-335bf893fa2c}</ProjectGuid>
+    <RootNamespace>SampleConsoleApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,46 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -145,81 +111,81 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CppTestSandbox.cpp" />
+    <ClCompile Include="..\snmalloc\src\override\malloc-extensions.cc" />
+    <ClCompile Include="SampleConsoleApp.cpp" />
     <ClCompile Include="SnmallocWrapper.cpp" />
-    <ClCompile Include="snmalloc\src\override\malloc-extensions.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\snmalloc\src\aal\aal.h" />
+    <ClInclude Include="..\snmalloc\src\aal\aal_arm.h" />
+    <ClInclude Include="..\snmalloc\src\aal\aal_concept.h" />
+    <ClInclude Include="..\snmalloc\src\aal\aal_consts.h" />
+    <ClInclude Include="..\snmalloc\src\aal\aal_powerpc.h" />
+    <ClInclude Include="..\snmalloc\src\aal\aal_sparc.h" />
+    <ClInclude Include="..\snmalloc\src\aal\aal_x86.h" />
+    <ClInclude Include="..\snmalloc\src\aal\aal_x86_sgx.h" />
+    <ClInclude Include="..\snmalloc\src\ds\aba.h" />
+    <ClInclude Include="..\snmalloc\src\ds\address.h" />
+    <ClInclude Include="..\snmalloc\src\ds\bits.h" />
+    <ClInclude Include="..\snmalloc\src\ds\cdllist.h" />
+    <ClInclude Include="..\snmalloc\src\ds\concept.h" />
+    <ClInclude Include="..\snmalloc\src\ds\csv.h" />
+    <ClInclude Include="..\snmalloc\src\ds\defines.h" />
+    <ClInclude Include="..\snmalloc\src\ds\dllist.h" />
+    <ClInclude Include="..\snmalloc\src\ds\flaglock.h" />
+    <ClInclude Include="..\snmalloc\src\ds\helpers.h" />
+    <ClInclude Include="..\snmalloc\src\ds\invalidptr.h" />
+    <ClInclude Include="..\snmalloc\src\ds\mpmcstack.h" />
+    <ClInclude Include="..\snmalloc\src\ds\mpscq.h" />
+    <ClInclude Include="..\snmalloc\src\ds\ptrwrap.h" />
+    <ClInclude Include="..\snmalloc\src\mem\address_space.h" />
+    <ClInclude Include="..\snmalloc\src\mem\alloc.h" />
+    <ClInclude Include="..\snmalloc\src\mem\allocconfig.h" />
+    <ClInclude Include="..\snmalloc\src\mem\allocslab.h" />
+    <ClInclude Include="..\snmalloc\src\mem\allocstats.h" />
+    <ClInclude Include="..\snmalloc\src\mem\arenamap.h" />
+    <ClInclude Include="..\snmalloc\src\mem\baseslab.h" />
+    <ClInclude Include="..\snmalloc\src\mem\chunkmap.h" />
+    <ClInclude Include="..\snmalloc\src\mem\entropy.h" />
+    <ClInclude Include="..\snmalloc\src\mem\external_alloc.h" />
+    <ClInclude Include="..\snmalloc\src\mem\freelist.h" />
+    <ClInclude Include="..\snmalloc\src\mem\globalalloc.h" />
+    <ClInclude Include="..\snmalloc\src\mem\largealloc.h" />
+    <ClInclude Include="..\snmalloc\src\mem\mediumslab.h" />
+    <ClInclude Include="..\snmalloc\src\mem\metaslab.h" />
+    <ClInclude Include="..\snmalloc\src\mem\pagemap.h" />
+    <ClInclude Include="..\snmalloc\src\mem\pool.h" />
+    <ClInclude Include="..\snmalloc\src\mem\pooled.h" />
+    <ClInclude Include="..\snmalloc\src\mem\ptrhelpers.h" />
+    <ClInclude Include="..\snmalloc\src\mem\remoteallocator.h" />
+    <ClInclude Include="..\snmalloc\src\mem\sizeclass.h" />
+    <ClInclude Include="..\snmalloc\src\mem\sizeclasstable.h" />
+    <ClInclude Include="..\snmalloc\src\mem\slab.h" />
+    <ClInclude Include="..\snmalloc\src\mem\slowalloc.h" />
+    <ClInclude Include="..\snmalloc\src\mem\superslab.h" />
+    <ClInclude Include="..\snmalloc\src\mem\threadalloc.h" />
+    <ClInclude Include="..\snmalloc\src\override\malloc-extensions.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_apple.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_bsd.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_bsd_aligned.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_concept.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_consts.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_dragonfly.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_freebsd.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_freebsd_kernel.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_haiku.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_linux.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_netbsd.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_noalloc.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_openbsd.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_open_enclave.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_plain.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_posix.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_solaris.h" />
+    <ClInclude Include="..\snmalloc\src\pal\pal_windows.h" />
+    <ClInclude Include="..\snmalloc\src\snmalloc.h" />
     <ClInclude Include="SnmallocWrapper.h" />
-    <ClInclude Include="snmalloc\src\aal\aal.h" />
-    <ClInclude Include="snmalloc\src\aal\aal_arm.h" />
-    <ClInclude Include="snmalloc\src\aal\aal_concept.h" />
-    <ClInclude Include="snmalloc\src\aal\aal_consts.h" />
-    <ClInclude Include="snmalloc\src\aal\aal_powerpc.h" />
-    <ClInclude Include="snmalloc\src\aal\aal_sparc.h" />
-    <ClInclude Include="snmalloc\src\aal\aal_x86.h" />
-    <ClInclude Include="snmalloc\src\aal\aal_x86_sgx.h" />
-    <ClInclude Include="snmalloc\src\ds\aba.h" />
-    <ClInclude Include="snmalloc\src\ds\address.h" />
-    <ClInclude Include="snmalloc\src\ds\bits.h" />
-    <ClInclude Include="snmalloc\src\ds\cdllist.h" />
-    <ClInclude Include="snmalloc\src\ds\concept.h" />
-    <ClInclude Include="snmalloc\src\ds\csv.h" />
-    <ClInclude Include="snmalloc\src\ds\defines.h" />
-    <ClInclude Include="snmalloc\src\ds\dllist.h" />
-    <ClInclude Include="snmalloc\src\ds\flaglock.h" />
-    <ClInclude Include="snmalloc\src\ds\helpers.h" />
-    <ClInclude Include="snmalloc\src\ds\invalidptr.h" />
-    <ClInclude Include="snmalloc\src\ds\mpmcstack.h" />
-    <ClInclude Include="snmalloc\src\ds\mpscq.h" />
-    <ClInclude Include="snmalloc\src\ds\ptrwrap.h" />
-    <ClInclude Include="snmalloc\src\mem\address_space.h" />
-    <ClInclude Include="snmalloc\src\mem\alloc.h" />
-    <ClInclude Include="snmalloc\src\mem\allocconfig.h" />
-    <ClInclude Include="snmalloc\src\mem\allocslab.h" />
-    <ClInclude Include="snmalloc\src\mem\allocstats.h" />
-    <ClInclude Include="snmalloc\src\mem\arenamap.h" />
-    <ClInclude Include="snmalloc\src\mem\baseslab.h" />
-    <ClInclude Include="snmalloc\src\mem\chunkmap.h" />
-    <ClInclude Include="snmalloc\src\mem\entropy.h" />
-    <ClInclude Include="snmalloc\src\mem\external_alloc.h" />
-    <ClInclude Include="snmalloc\src\mem\freelist.h" />
-    <ClInclude Include="snmalloc\src\mem\globalalloc.h" />
-    <ClInclude Include="snmalloc\src\mem\largealloc.h" />
-    <ClInclude Include="snmalloc\src\mem\mediumslab.h" />
-    <ClInclude Include="snmalloc\src\mem\metaslab.h" />
-    <ClInclude Include="snmalloc\src\mem\pagemap.h" />
-    <ClInclude Include="snmalloc\src\mem\pool.h" />
-    <ClInclude Include="snmalloc\src\mem\pooled.h" />
-    <ClInclude Include="snmalloc\src\mem\ptrhelpers.h" />
-    <ClInclude Include="snmalloc\src\mem\remoteallocator.h" />
-    <ClInclude Include="snmalloc\src\mem\sizeclass.h" />
-    <ClInclude Include="snmalloc\src\mem\sizeclasstable.h" />
-    <ClInclude Include="snmalloc\src\mem\slab.h" />
-    <ClInclude Include="snmalloc\src\mem\slowalloc.h" />
-    <ClInclude Include="snmalloc\src\mem\superslab.h" />
-    <ClInclude Include="snmalloc\src\mem\threadalloc.h" />
-    <ClInclude Include="snmalloc\src\override\malloc-extensions.h" />
-    <ClInclude Include="snmalloc\src\pal\pal.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_apple.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_bsd.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_bsd_aligned.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_concept.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_consts.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_dragonfly.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_freebsd.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_freebsd_kernel.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_haiku.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_linux.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_netbsd.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_noalloc.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_openbsd.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_open_enclave.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_plain.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_posix.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_solaris.h" />
-    <ClInclude Include="snmalloc\src\pal\pal_windows.h" />
-    <ClInclude Include="snmalloc\src\snmalloc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

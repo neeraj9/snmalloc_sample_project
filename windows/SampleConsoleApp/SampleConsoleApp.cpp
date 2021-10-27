@@ -48,7 +48,7 @@ namespace
                 throw std::bad_array_new_length();
 
             //if (auto p = static_cast<T*>(std::malloc(n * sizeof(T)))) {
-            if (auto p = static_cast<T*>(::sn_malloc(n * sizeof(T)))) {
+            if (auto p = static_cast<T*>(::SNMALLOC_NAME_MANGLE(malloc)(n * sizeof(T)))) {
                 report(p, n);
                 cout << PREFIX << "  allocate(" << n << ") = " << p << endl;
                 return p;
@@ -61,7 +61,7 @@ namespace
             cout << PREFIX << "deallocate(" << p << ", " << n << ")" << endl;
             report(p, n, 0);
             //std::free(p);
-            ::sn_free(p);
+            ::SNMALLOC_NAME_MANGLE(free)(p);
         }
 
     private:

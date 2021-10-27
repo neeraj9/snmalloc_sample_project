@@ -3,5 +3,5 @@
 
 #include "SnmallocWrapper.h"
 
-#include "snmalloc/src/override/malloc.cc"
-#include "snmalloc/src/override/new.cc"
+#include "../snmalloc/src/override/malloc.cc"
+#include "../snmalloc/src/override/new.cc"
