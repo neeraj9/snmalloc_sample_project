@@ -231,6 +231,9 @@
     <ClInclude Include="..\snmalloc\src\mem\threadalloc.h">
       <Filter>Snmalloc Files</Filter>
     </ClInclude>
+    <ClInclude Include="SnmallocWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNativeLibrary.cpp">
@@ -241,6 +244,9 @@
     </ClCompile>
     <ClCompile Include="..\snmalloc\src\override\malloc-extensions.cc">
       <Filter>Snmalloc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SnmallocWrapper.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
