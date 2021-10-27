@@ -3,3 +3,7 @@
 
 # built for x64 target
 x64
+
+# csharp artifacts
+obj
+bin
