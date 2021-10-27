@@ -12,8 +12,6 @@ The code repository [windows](./windows), shall capture
 the Microsoft windows operating system and is largely
 built using Visual Studio 2019.
 
-### Standalone pure c++ project
-
 You first need to clone and get snmalloc submodule
 as follows.
 
@@ -24,6 +22,8 @@ cd windows
 git submodule init
 git submodule update
 ```
+
+### Standalone pure c++ project
 
 You should then subsequently open [SnmallocSample.sln](./windows/SnmallocSample.sln)
 and more specifically build `SampleConsoleApp`. This will
