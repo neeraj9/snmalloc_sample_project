@@ -1,4 +1,4 @@
-# snmalloc_sample_project
+# Sample project to use [snmalloc]
 
 This is a sample project which uses [snmalloc] in a couple
 of different setup. There are a couple of ways to
