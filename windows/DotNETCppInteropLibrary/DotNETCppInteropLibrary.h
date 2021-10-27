@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SearchWeb.h"
+//#include <System.dll>
 
 using namespace System;
 
@@ -31,7 +32,7 @@ namespace DotNETCppInteropLibrary {
 		InteropSearchWeb();
 		virtual ~InteropSearchWeb();
 
-		InteropSearchResults Search(String^ keyword);
+		bool Search(InteropSearchResults^% result, String^ keyword);
 
 	private:
 		// can only have pointer of native class

@@ -24,12 +24,13 @@ InteropSearchWeb::~InteropSearchWeb()
     delete mpSearchWeb;
 }
 
-InteropSearchResults InteropSearchWeb::Search(String^ keyword)
+bool InteropSearchWeb::Search(InteropSearchResults^% result, String^ keyword)
 {
     NativeLibrary::SearchWeb::String strKeyword(InteropUtil::ToNative(keyword));
     NativeLibrary::SearchWeb::SearchResult nativeResult = mpSearchWeb->Search(strKeyword);
-    InteropSearchResults clrResult(nativeResult.mScore, InteropUtil::ToCLR(nativeResult.mUrl));
+    //InteropSearchResults clrResult(nativeResult.mScore, InteropUtil::ToCLR(nativeResult.mUrl));
     // is there any other way to return this?
     // TODO: FIXME maybe take reference of input argument and set it
-    return clrResult;
+    result = gcnew InteropSearchResults(nativeResult.mScore, InteropUtil::ToCLR(nativeResult.mUrl));
+    return true;
 }
