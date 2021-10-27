@@ -1,2 +1,3 @@
 # snmalloc_sample_project
-Sample project using snmalloc
+
+Sample project using snmalloc.
