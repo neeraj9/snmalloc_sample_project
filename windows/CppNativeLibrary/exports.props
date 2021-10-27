@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <CPPNATIVELIBRARY_Imported>True</CPPNATIVELIBRARY_Imported>
+  </PropertyGroup>
+  <ItemGroup>
+    <QCustomInput Include="$(SolutionDir)\CppNativeLibrary\*.h">
+      <Visible>false</Visible>
+    </QCustomInput>
+  </ItemGroup>
+  <ItemGroup Condition="'$(ConfigurationType)' != 'StaticLibrary' And '$(Language)' == 'C++' And '$(MSBuildUseProjectReferences)' == 'true'">
+    <ProjectReference Include="$(MSBuildThisFileDirectory)CppNativeLibrary.vcxproj">
+      <Project>{A125C83C-64F7-4DD8-A80F-B222BB36571E}</Project>
+      <Name>CppNativeLibrary.lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies Condition="'$(MSBuildUseProjectReferences)' != 'true'">%(Link.AdditionalDependencies);$(SolutionDir)\CppNativeLibrary\bin\$(Configuration)\$(Platform)\CppNativeLibrary.lib</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(ClCompile.AdditionalIncludeDirectories);$(SolutionDir)\CppNativeLibrary\</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

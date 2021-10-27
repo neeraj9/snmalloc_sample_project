@@ -16,6 +16,9 @@
     <Filter Include="Snmalloc Files">
       <UniqueIdentifier>{bbf71864-7c5d-40ae-b56a-698c12a16c45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Other Files">
+      <UniqueIdentifier>{42d75311-a56d-434c-abb9-a1042b1e18d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -242,11 +245,13 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\snmalloc\src\override\malloc-extensions.cc">
-      <Filter>Snmalloc Files</Filter>
-    </ClCompile>
     <ClCompile Include="SnmallocWrapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exports.props">
+      <Filter>Other Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
