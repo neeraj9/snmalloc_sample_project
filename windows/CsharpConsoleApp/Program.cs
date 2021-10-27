@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Author: Neeraj Sharma <neerajsharma.9@outlook.com>
+// License MIT
+
+using System;
 using DotNETCppInteropLibrary;
 
 namespace CsharpConsoleApp

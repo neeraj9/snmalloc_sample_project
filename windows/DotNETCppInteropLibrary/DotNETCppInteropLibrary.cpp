@@ -1,3 +1,6 @@
+// Author: Neeraj Sharma <neerajsharma.9@outlook.com>
+// License MIT
+
 #include "pch.h"
 
 #include "DotNETCppInteropLibrary.h"
