@@ -29,10 +29,6 @@ namespace NativeLibrary
             Out() << "CustomAllocator(CustomAllocator const&)" << std::endl;
         }
 
-        //template <class U> constexpr CustomAllocator(CustomAllocator <U> const&) noexcept {
-            //Out() << "CustomAllocator(CustomAllocator <U> const&)" << std::endl;
-        //}
-
         ~CustomAllocator()
         {
             Out() << "~CustomAllocator()" << std::endl;
