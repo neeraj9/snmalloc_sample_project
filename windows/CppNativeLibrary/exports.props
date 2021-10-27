@@ -16,7 +16,7 @@
   </ItemGroup>
   <ItemDefinitionGroup>
     <Link>
-      <AdditionalDependencies Condition="'$(MSBuildUseProjectReferences)' != 'true'">%(Link.AdditionalDependencies);$(SolutionDir)\CppNativeLibrary\bin\$(Configuration)\$(Platform)\CppNativeLibrary.lib</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(MSBuildUseProjectReferences)' != 'true'">%(Link.AdditionalDependencies);mincore.lib;$(SolutionDir)\$(Platform)\$(Configuration)\CppNativeLibrary.lib</AdditionalDependencies>
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>%(ClCompile.AdditionalIncludeDirectories);$(SolutionDir)\CppNativeLibrary\</AdditionalIncludeDirectories>
