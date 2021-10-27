@@ -7,7 +7,6 @@
 
 using namespace DotNETCppInteropLibrary;
 
-
 InteropSearchResults::InteropSearchResults(const InteropSearchResults% other)
     : mScore(other.mScore),
       mUrl(other.mUrl)
@@ -24,7 +23,7 @@ InteropSearchWeb::~InteropSearchWeb()
     delete mpSearchWeb;
 }
 
-bool InteropSearchWeb::Search(InteropSearchResults^% result, String^ keyword)
+bool InteropSearchWeb::Search([System::Runtime::InteropServices::Out] InteropSearchResults^% result, String^ keyword)
 {
     NativeLibrary::SearchWeb::String strKeyword(InteropUtil::ToNative(keyword));
     NativeLibrary::SearchWeb::SearchResult nativeResult = mpSearchWeb->Search(strKeyword);

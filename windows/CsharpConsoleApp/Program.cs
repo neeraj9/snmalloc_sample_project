@@ -14,10 +14,10 @@ namespace CsharpConsoleApp
 
             InteropSearchWeb search = new InteropSearchWeb();
             String keyword = "hello";
-            InteropSearchResults searchResults = new InteropSearchResults(-1, "");
+            //InteropSearchResults searchResults = new InteropSearchResults(-1, "");
             for (int i = 0; i < 2; ++i)
             {
-                search.Search(ref searchResults, keyword);
+                search.Search(out var searchResults, keyword);
                 Console.WriteLine($"searchResults is Score: {searchResults.mScore}, Url: '{searchResults.mUrl}'");
                 Console.WriteLine();
             }
