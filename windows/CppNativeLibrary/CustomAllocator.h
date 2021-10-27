@@ -20,7 +20,8 @@ namespace NativeLibrary
             Out() << "CustomAllocator()" << std::endl;
         }
 
-        template <class U> constexpr CustomAllocator(const CustomAllocator <U>&) noexcept {
+        template <class U> constexpr CustomAllocator(const CustomAllocator <U>&) noexcept
+        {
             Out() << "CustomAllocator(const CustomAllocator <U>&)" << std::endl;
         }
 
@@ -34,13 +35,17 @@ namespace NativeLibrary
             Out() << "~CustomAllocator()" << std::endl;
         }
 
-        [[nodiscard]] T* allocate(std::size_t n) {
+        [[nodiscard]] T* allocate(std::size_t n)
+        {
             Out() << "allocate(" << n << ")" << std::endl;
             if (n > std::numeric_limits<std::size_t>::max() / sizeof(T))
+            {
                 throw std::bad_array_new_length();
+            }
 
             //if (auto p = static_cast<T*>(std::malloc(n * sizeof(T)))) {
-            if (auto p = static_cast<T*>(::SNMALLOC_NAME_MANGLE(malloc)(n * sizeof(T)))) {
+            if (auto p = static_cast<T*>(::SNMALLOC_NAME_MANGLE(malloc)(n * sizeof(T))))
+            {
                 report(p, n);
                 Out() << "  allocate(" << n << ") = " << p << std::endl;
                 return p;
@@ -49,7 +54,8 @@ namespace NativeLibrary
             throw std::bad_alloc();
         }
 
-        void deallocate(T* p, std::size_t n) noexcept {
+        void deallocate(T* p, std::size_t n) noexcept
+        {
             Out() << "deallocate(" << p << ", " << n << ")" << std::endl;
             report(p, n, 0);
             //std::free(p);
@@ -57,7 +63,8 @@ namespace NativeLibrary
         }
 
     private:
-        void report(T* p, std::size_t n, bool alloc = true) const {
+        void report(T* p, std::size_t n, bool alloc = true) const
+        {
             Out() << " " << (alloc ? "Alloc: " : "Dealloc: ") << sizeof(T) * n
                 << " bytes at " << std::hex << std::showbase
                 << reinterpret_cast<void*>(p) << std::dec << '\n';
