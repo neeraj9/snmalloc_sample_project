@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Snmalloc Files">
+      <UniqueIdentifier>{bbf71864-7c5d-40ae-b56a-698c12a16c45}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -21,6 +24,213 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal_arm.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal_concept.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal_consts.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal_powerpc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal_sparc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal_x86.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\aal\aal_x86_sgx.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\aba.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\address.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\address_space.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\alloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\allocconfig.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\allocslab.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\allocstats.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\arenamap.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\baseslab.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\bits.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\cdllist.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\chunkmap.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\concept.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\csv.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\defines.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\dllist.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\entropy.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\external_alloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\flaglock.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\freelist.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\globalalloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\helpers.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\invalidptr.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\largealloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\override\malloc-extensions.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\mediumslab.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\metaslab.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\mpmcstack.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\mpscq.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\pagemap.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_apple.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_bsd.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_bsd_aligned.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_concept.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_consts.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_dragonfly.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_freebsd.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_freebsd_kernel.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_haiku.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_linux.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_netbsd.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_noalloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_open_enclave.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_openbsd.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_plain.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_posix.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_solaris.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\pal\pal_windows.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\pool.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\pooled.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\ptrhelpers.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\ds\ptrwrap.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\remoteallocator.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\sizeclass.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\sizeclasstable.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\slab.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\slowalloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\snmalloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\superslab.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\snmalloc\src\mem\threadalloc.h">
+      <Filter>Snmalloc Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppNativeLibrary.cpp">
@@ -28,6 +238,9 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\snmalloc\src\override\malloc-extensions.cc">
+      <Filter>Snmalloc Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
