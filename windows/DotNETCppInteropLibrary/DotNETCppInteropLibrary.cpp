@@ -30,9 +30,6 @@ bool InteropSearchWeb::Search([System::Runtime::InteropServices::Out] InteropSea
 {
     NativeLibrary::SearchWeb::String strKeyword(InteropUtil::ToNative(keyword));
     NativeLibrary::SearchWeb::SearchResult nativeResult = mpSearchWeb->Search(strKeyword);
-    //InteropSearchResults clrResult(nativeResult.mScore, InteropUtil::ToCLR(nativeResult.mUrl));
-    // is there any other way to return this?
-    // TODO: FIXME maybe take reference of input argument and set it
     result = gcnew InteropSearchResults(nativeResult.mScore, InteropUtil::ToCLR(nativeResult.mUrl));
-    return true;
+    return !nativeResult.mUrl.empty();
 }

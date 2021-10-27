@@ -19,8 +19,8 @@ namespace CsharpConsoleApp
             String keyword = "hello";
             for (int i = 0; i < 2; ++i)
             {
-                search.Search(out var searchResults, keyword);
-                Console.WriteLine($"searchResults is Score: {searchResults.mScore}, Url: '{searchResults.mUrl}'");
+                bool found = search.Search(out var searchResults, keyword);
+                Console.WriteLine($"searchResults, found: {found}, Score: {searchResults.mScore}, Url: '{searchResults.mUrl}'");
                 Console.WriteLine();
             }
         }
