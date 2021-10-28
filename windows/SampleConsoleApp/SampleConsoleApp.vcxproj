@@ -110,6 +110,11 @@
       <AdditionalDependencies>mincore.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\snmalloc\src\override\malloc-extensions.cc" />
     <ClCompile Include="SampleConsoleApp.cpp" />
