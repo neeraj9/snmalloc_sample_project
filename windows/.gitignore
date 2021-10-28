@@ -7,3 +7,9 @@ x64
 # csharp artifacts
 obj
 bin
+
+# Remove VS build directory 
+Debug
+Release
+*/Debug
+*/Release
