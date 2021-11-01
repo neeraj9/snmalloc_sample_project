@@ -16,11 +16,7 @@ You first need to clone and get snmalloc submodule
 as follows.
 
 ```console
-git clone https://github.com/neeraj9/snmalloc_sample_project
-cd snmalloc_sample_project
-cd windows
-git submodule init
-git submodule update
+git clone https://github.com/neeraj9/snmalloc_sample_project --recursive
 ```
 
 ### Standalone pure c++ project
